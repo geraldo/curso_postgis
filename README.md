@@ -12,6 +12,8 @@ Hay que tener instalado PostgreSQL, PostGIS, pgAdmin 4 y QGIS Desktop.
 
 Tutorial como instalar postgreSQL y PostGIS en Windows https://youtu.be/_EgtELrjLO4
 
+Los pasos mśa importantes están en estas [capturas de pantalla](https://github.com/geraldo/curso_postgis/datos).
+
 ### Linux
 
 Protoclo de instalación y configuración en Linux: [Enlace Github](https://github.com/carlospsig/protocol_install_qgis_ubuntu/blob/master/install_postgis.sh)
@@ -33,9 +35,9 @@ Protoclo de instalación y configuración en Linux: [Enlace Github](https://gith
 ```
 host=localhost
 port=5432
-dbase=postgres
+dbname=postgres
 user=postgres
-password=??
+password=postgres
 ```
 
 5. Crear una nueva base de datos llamada `gis_curso`
@@ -56,11 +58,21 @@ Ejecutar la sintaxi siguiente en una "Query Tool", antes de ejecutarlo reemplaza
 
 `CREATE ROLE gisadmin login PASSWORD 'your_password' SUPERUSER CREATEDB CREATEROLE NOINHERIT;`
 
-8. Abrir QGIS con el usuario gisadmin
+8. Definir pg_service.conf
+
+```
+host=localhost
+port=5432
+dbname=gis_curso
+user=gisadmin
+password=your_password
+```
+
+9. Abrir QGIS con el usuario gisadmin
 
 Crear un nueva conexión con el usuario `gisadmin` y guardar la conexión.
 
-9. Utilizar el DB Manager para cargar capas
+10. Utilizar el DB Manager para cargar capas
 
 - Abrimos el complemento DB Manager
 - Primero creamos nuevos esquemas

@@ -1067,7 +1067,7 @@ CREATE INDEX sidx_munis_poly_geom ON limit_admin.munis_poly USING gist (geom);
 -- Name: TABLE munis_poly; Type: ACL; Schema: limit_admin; Owner: gisadmin
 --
 
-GRANT ALL ON TABLE limit_admin.munis_poly TO g_admin;
+GRANT ALL ON TABLE limit_admin.munis_poly TO gisadmin;
 
 
 --
@@ -1076,7 +1076,7 @@ GRANT ALL ON TABLE limit_admin.munis_poly TO g_admin;
 -- Name: SEQUENCE munis_poly_id_seq; Type: ACL; Schema: limit_admin; Owner: gisadmin
 --
 
-GRANT ALL ON SEQUENCE limit_admin.munis_poly_id_seq TO g_admin;
+GRANT ALL ON SEQUENCE limit_admin.munis_poly_id_seq TO gisadmin;
 
 
 -- Completed on 2024-07-02 21:09:35
