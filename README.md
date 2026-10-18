@@ -12,7 +12,7 @@ Hay que tener instalado PostgreSQL, PostGIS, pgAdmin 4 y QGIS Desktop.
 
 Tutorial como instalar postgreSQL y PostGIS en Windows https://youtu.be/_EgtELrjLO4
 
-Los pasos mśa importantes están en estas [capturas de pantalla](https://github.com/geraldo/curso_postgis/datos).
+Los pasos mśa importantes están en estas [capturas de pantalla](https://github.com/geraldo/curso_postgis/tree/main/capturas).
 
 ### Linux
 
@@ -79,13 +79,11 @@ Crear un nueva conexión con el usuario `gisadmin` y guardar la conexión.
     - limit_admin
     - medi_ambient
 
-Luego importar las capas de municipis, comarques y PEIN, cómo mínimo. Cargar las capas que hay en la carpeta `https://github.com/geraldo/curso_postgis/datos`.
+Luego importar las capas de municipis, comarques y PEIN, cómo mínimo. Cargar las capas que hay en la carpeta [datos](https://github.com/geraldo/curso_postgis/tree/main/datos).
 
 ## Notas
 
-Otros vídeos tutoriales en este canal
-
-http://www.youtube.com/c/CarlosLópezQuintanilla
+Otros vídeos tutoriales en este canal: http://www.youtube.com/c/CarlosLópezQuintanilla
 
 Gracias a [Carlos López](carlos.lopez@psig.es) por el material.
 
