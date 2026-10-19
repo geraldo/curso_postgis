@@ -22,7 +22,7 @@ Protoclo de instalación y configuración en Linux: [Enlace Github](https://gith
 
 [Enlace pg_service.conf](https://docs.qgis.org/3.44/en/docs/user_manual/managing_data_source/opening_data.html)
 
-## Pasos a seguir
+## Pasos a instalación día 1
 
 1. Instalar PostgreSQL 18
 
@@ -68,18 +68,25 @@ user=gisadmin
 password=your_password
 ```
 
-9. Abrir QGIS con el usuario gisadmin
+9. Abrir QGIS con el usuario gisadmin (vídeo a partir del minuto 20)
 
 Crear un nueva conexión con el usuario `gisadmin` y guardar la conexión.
 
-10. Utilizar el DB Manager para cargar capas
+10. Montar proyecto QGIS
 
-- Abrimos el complemento DB Manager
-- Primero creamos nuevos esquemas
+Importamos 3 capas municipis, comarques y PEIN desde los Geopackage que hay en la carpeta [datos](https://github.com/geraldo/curso_postgis/tree/main/datos).
+
+11. Crear conexción a base de datos gis_curso desde Administrador de fuentes de datos
+
+12. Utilizar el DB Manager para importar datos a PostgreSQL
+
+a. Abrimos el complemento DB Manager
+b. Creamos nuevos esquemas
     - limit_admin
     - medi_ambient
+c. Importar capa/archivo
 
-Luego importar las capas de municipis, comarques y PEIN, cómo mínimo. Cargar las capas que hay en la carpeta [datos](https://github.com/geraldo/curso_postgis/tree/main/datos).
+13. Cargar capa desde base de datos haciendo doble click en DB Manager
 
 ## Notas
 
