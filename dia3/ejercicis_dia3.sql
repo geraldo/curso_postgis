@@ -45,3 +45,9 @@ SELECT nom_comar, count(*)
 FROM limit_admin.municipis
 GROUP BY nom_comar
 HAVING count(*) < 10;
+
+-- Crear vista provincias
+CREATE VIEW limit_admin.procincias AS
+SELECT nom_prov, ST_Union(geom) as geom
+FROM limit_admin.municipis
+GROUP BY nom_prov;
