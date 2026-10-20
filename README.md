@@ -61,12 +61,18 @@ Ejecutar la sintaxi siguiente en una "Query Tool", antes de ejecutarlo reemplaza
 8. Definir pg_service.conf
 
 ```
+[gis_curso]
 host=localhost
 port=5432
 dbname=gis_curso
 user=gisadmin
 password=your_password
 ```
+
+Crear variable de entorno en Windows:
+- Nombre de la variable: `PGSYSCONFDIR`
+- Valor de la variable: Ubicación del fichero `pg_service.conf`
+
 
 9. Abrir QGIS con el usuario gisadmin (vídeo a partir del minuto 20)
 
