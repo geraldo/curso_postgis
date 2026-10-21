@@ -1,9 +1,9 @@
--- listado de municipios que tocan el MASsís del MONtseny
+-- listado de municipios que tocan el Masssís del Garraf
 SELECT m.codi_muni, m.nom_muni, m.poblacio, m.geom
 FROM LIMIT_admin.municipis AS m
 LEFT JOIN medi_ambient.pein AS p
 ON ST_Intersects(m.geom, p.geom) 
-WHERE p.nom='MASsís del MONtseny'
+WHERE p.nom='Masssís del Garraf'
 GROUP BY m.codi_muni, m.nom_muni, m.poblacio, m.geom;
 
 -- Provincia que tiene el municipi más pequeño
@@ -16,20 +16,20 @@ WHERE codi_prov = (
 	LIMIT 1 
 );
 
--- 1- listado de municipios que están dentro del pein MONtseny
+-- 1- listado de municipios que están dentro del pein Masssís del Garraf
 -- Eliminar la vista si existe
 DROP VIEW IF EXISTS LIMIT_admin.v_munis_mONtseny CASCADE;
 -- Crea la vista, habitantes de Cat
 CREATE VIEW LIMIT_admin.v_munis_mONtseny AS
 SELECT m.codi_muni, m.nom_muni, m.geom
 FROM LIMIT_admin.municipis AS m, medi_ambient.espais_pein AS p
-WHERE ST_Intersects(m.geom, p.geom) AND p.nom='MASsís del MONtseny'
+WHERE ST_Intersects(m.geom, p.geom) AND p.nom='Masssís del Garraf'
 GROUP BY m.codi_muni, m.nom_muni, m.geom;
 
--- 2- Superfície de intersección entre el municipio de Viladrau y el PEIN del MONtseny
+-- 2- Superfície de intersección entre el municipio de Viladrau y el PEIN del Masssís del Garraf
 -- Eliminar la vista si existe
 DROP VIEW IF EXISTS LIMIT_admin.v_viladrau_mONtseny CASCADE;
--- Vista Viladrau intersectiON MONtseny
+-- Vista Viladrau intersection Masssís del Garraf
 CREATE VIEW LIMIT_admin.vista_viladrau AS
   SELECT m.codi_muni, m.nom_muni,
    ST_IntersectiON(m.geom, p.geom) AS geom,

@@ -16,12 +16,12 @@ ORDER BY poblacio DESC
 LIMIT 10;
 
 -- Suma de població del Barcelonès
-SELECT sum(poblacio)
+SELECT SUM(poblacio)
 FROM limit_admin.municipis
 WHERE nom_comar = 'Barcelonès';
 
 -- Quants municipis tenen menys de 100 habitants
-SELECT count(*)
+SELECT COUNT(*)
 FROM limit_admin.municipis
 WHERE poblacio < 100;
 
@@ -41,13 +41,18 @@ FROM limit_admin.municipis
 GROUP BY nom_prov;
 
 -- Quins comarques tenen menys de 10 municipis
-SELECT nom_comar, count(*)
+SELECT nom_comar, COUNT(*)
 FROM limit_admin.municipis
 GROUP BY nom_comar
-HAVING count(*) < 10;
+HAVING COUNT(*) < 10;
 
 -- Crear vista provincias
 CREATE VIEW limit_admin.procincias AS
 SELECT nom_prov, ST_Union(geom) as geom
 FROM limit_admin.municipis
 GROUP BY nom_prov;
+
+-- crear vista de centros de comarcas
+CREATE VIEW centro_comarca AS
+SELECT nom_comar, ST_Centroid(geom)
+FROM limit_admin.comarques;

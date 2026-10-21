@@ -22,7 +22,7 @@ Protoclo de instalación y configuración en Linux: [Enlace Github](https://gith
 
 [Enlace pg_service.conf](https://docs.qgis.org/3.44/en/docs/user_manual/managing_data_source/opening_data.html)
 
-## Apuntes día 1
+## Pasos nstalación día 1
 
 1. Instalar PostgreSQL 18
 
@@ -78,7 +78,7 @@ c. Importar capa/archivo
 
 12. Cargar capa desde base de datos haciendo doble click en DB Manager
 
-## Apuntes día 2
+## Pasos configuración día 2
 
 1. Definir pg_service.conf
 
@@ -104,6 +104,17 @@ Crear variable de entorno en Windows:
 Publicar 3 capas municipis, comarques y PEIN desde los Geopackage a base de datos
 
 5. Utilizar capas desde PostgreSQL en QGIS
+
+## Resumen SQL día 3
+
+```
+SELECT [columnas/atributos]
+FROM [esquema.tabla]
+WHERE [condiciones]
+GROUP BY [columnas/atributos]
+ORDER BY [columnas/atributos]
+LIMIT [num];
+```
 
 ## Notas
 
