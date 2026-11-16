@@ -22,7 +22,7 @@ Protoclo de instalación y configuración en Linux: [Enlace Github](https://gith
 
 [Enlace pg_service.conf](https://docs.qgis.org/3.44/en/docs/user_manual/managing_data_source/opening_data.html)
 
-## Pasos nstalación día 1
+## Pasos instalación día 1
 
 1. Instalar PostgreSQL 18
 
