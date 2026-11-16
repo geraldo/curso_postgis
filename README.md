@@ -40,23 +40,23 @@ user=postgres
 password=postgres
 ```
 
-5. Crear una nueva base de datos llamada `gis_curso`
+5. Crear un nuevo usuario gisadmin
+
+Ejecutar la sintaxi siguiente en una "Query Tool", antes de ejecutarlo reemplazar el texto 'your_password' por un password vuestro personal y guardarlo en agún sitio seguro como keepass
+
+`CREATE ROLE gisadmin login PASSWORD 'your_password' SUPERUSER CREATEDB CREATEROLE NOINHERIT;`
+
+6. Crear una nueva base de datos llamada `gis_curso` y definir usuario gisadmin como dueño
 
 A futuro, les recomiendo utilizar otra base de datos como plantilla (template), en concreto la base de datos "postgres" (pe).
 
-6. Activar la extensión de PostGIS
+7. Activar la extensión de PostGIS
 
 Ejecutar la sintaxi siguiente en una "Query Tool":
 
 `create extension postgis;`
 
 Podemos compartir el código en esta web: https://codeshare.io/curso_postgis
-
-7. Crear un nuevo usuario gisadmin
-
-Ejecutar la sintaxi siguiente en una "Query Tool", antes de ejecutarlo reemplazar el texto 'your_password' por un password vuestro personal y guardarlo en agún sitio seguro como keepass
-
-`CREATE ROLE gisadmin login PASSWORD 'your_password' SUPERUSER CREATEDB CREATEROLE NOINHERIT;`
 
 8. Abrir QGIS con el usuario gisadmin (vídeo a partir del minuto 20)
 
