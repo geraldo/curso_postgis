@@ -10,7 +10,7 @@ Hay que tener instalado PostgreSQL, PostGIS, pgAdmin 4 y QGIS Desktop.
 
 ### Windows
 
-Tutorial como instalar postgreSQL y PostGIS en Windows https://youtu.be/_EgtELrjLO4
+Tutorial como instalar postgreSQL y PostGIS en Windows: https://youtu.be/_EgtELrjLO4
 
 Los pasos mśa importantes están en estas [capturas de pantalla](https://github.com/geraldo/curso_postgis/tree/main/dia1).
 
@@ -28,7 +28,7 @@ Protoclo de instalación y configuración en Linux: [Enlace Github](https://gith
 
 2. Instalar PostGIS 3
 
-3. Instalar pgAdmin4 9
+3. Instalar pgAdmin 4
 
 4. Abrir pgAdmin con la configuración inicial
 
@@ -42,15 +42,15 @@ password=postgres
 
 5. Crear una nueva base de datos llamada `gis_curso`
 
-A futuro, les recomiendo utilizar otra base de dadtos como plantilla (template) la base de datos "postgres" (pe)
+A futuro, les recomiendo utilizar otra base de datos como plantilla (template), en concreto la base de datos "postgres" (pe).
 
 6. Activar la extensión de PostGIS
 
-Ejecutar la sintaxi siguiente en una "Query Tool"
+Ejecutar la sintaxi siguiente en una "Query Tool":
 
 `create extension postgis;`
 
-podemos compartir el código en esta web: https://codeshare.io/curso_postgis
+Podemos compartir el código en esta web: https://codeshare.io/curso_postgis
 
 7. Crear un nuevo usuario gisadmin
 
@@ -66,15 +66,15 @@ Crear un nueva conexión con el usuario `gisadmin` y guardar la conexión.
 
 Importamos 3 capas municipis, comarques y PEIN desde los Geopackage que hay en la carpeta [datos](https://github.com/geraldo/curso_postgis/tree/main/datos).
 
-10. Crear conexción a base de datos gis_curso desde Administrador de fuentes de datos
+10. Crear conexción a base de datos `gis_curso` desde Administrador de fuentes de datos
 
 11. Utilizar el DB Manager para importar datos a PostgreSQL
 
-a. Abrimos el complemento DB Manager
-b. Creamos nuevos esquemas
-    - limit_admin
-    - medi_ambient
-c. Importar capa/archivo
+    a. Abrimos el complemento DB Manager
+    b. Creamos nuevos esquemas
+        - limit_admin
+        - medi_ambient
+    c. Importar capa/archivo
 
 12. Cargar capa desde base de datos haciendo doble click en DB Manager
 
