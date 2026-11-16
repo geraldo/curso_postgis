@@ -12,7 +12,7 @@ Hay que tener instalado PostgreSQL, PostGIS, pgAdmin 4 y QGIS Desktop.
 
 Tutorial como instalar postgreSQL y PostGIS en Windows https://youtu.be/_EgtELrjLO4
 
-Los pasos mśa importantes están en estas [capturas de pantalla](https://github.com/geraldo/curso_postgis/tree/main/capturas).
+Los pasos mśa importantes están en estas [capturas de pantalla](https://github.com/geraldo/curso_postgis/tree/main/dia1).
 
 ### Linux
 
