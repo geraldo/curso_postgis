@@ -24,17 +24,8 @@ WHERE m.poblacio is not null
 GROUP BY m.nom_comar
 ORDER BY SUM(m.poblacio) DESC;
 
--- CONtar cuantos municipios hay en cada comarca
+-- Contar cuantos municipios hay en cada comarca
 SELECT nom_comar, COUNT(nom_comar)
 FROM LIMIT_admin.municipis
 WHERE poblacio is not null
 GROUP BY nom_comar;
-
--- listado de nombres de comarcas y espacios del PEIN
-SELECT 'comarca' AS origen , nom_comar AS nom
-FROM limit_admin.comarques
-UNION 
-SELECT 'pein' AS origen, nom_pein AS nom
-FROM medi_ambient.pein
-ORDER BY origen, nom;
-				  
